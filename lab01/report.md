@@ -64,7 +64,7 @@ def binary_search(arr, target):
             right = mid - 1
     return -1                      # O(1)
     # Общая сложность: O(log n)
-```markdown
+```
 
 ## Результаты выполнения
 ```
@@ -84,7 +84,7 @@ def binary_search(arr, target):
     500000          8.7683          0.0029
    1000000         45.9990          0.0032
 
-```markdown
+```
 
 ## Анализ результатов
    
