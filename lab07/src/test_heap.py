@@ -296,7 +296,6 @@ def plot_performance(results):
     plt.grid(True, alpha=0.3)
     
     plt.tight_layout()
-    plt.savefig('heap_performance.png', dpi=150, bbox_inches='tight')
     plt.show()
     
 
