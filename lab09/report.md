@@ -310,7 +310,7 @@ F(20):
 ![График 1](report/fibonacci_comparison.png)
 
 **График 2:**  Таблица задачи о рюкзаке
-![График 2](report/fibonacci_comparison.png)
+![График 2](report/knapsack_table.png)
 
 **График 3:**  Таблица LCS для "ABCDGH" и "AEDFHR"
 ![График 3](report/lcs_table.png)
