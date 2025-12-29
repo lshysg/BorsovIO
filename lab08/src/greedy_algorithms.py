@@ -186,44 +186,6 @@ def coin_change_greedy(amount: int, coins: List[int]) -> Dict[int, int]:
     
     return result
 
-# ==================== Алгоритм Прима ====================
-def prim_mst(graph: Dict[str, List[Tuple[str, int]]]) -> List[Tuple[str, str, int]]:
-    """
-    Алгоритм Прима для поиска минимального остовного дерева.
-    Сложность: O(E log V) с использованием кучи
-    """
-    if not graph:
-        return []
-    
-    # Начинаем с произвольной вершины
-    start_node = list(graph.keys())[0]
-    
-    # Множество посещенных вершин
-    visited = {start_node}
-    
-    # Ребра, инцидентные посещенным вершинам
-    edges = [
-        (cost, start_node, neighbor)
-        for neighbor, cost in graph[start_node]
-    ]
-    heapq.heapify(edges)
-    
-    mst = []
-    
-    while edges and len(visited) < len(graph):
-        cost, src, dest = heapq.heappop(edges)
-        
-        if dest not in visited:
-            visited.add(dest)
-            mst.append((src, dest, cost))
-            
-            # Добавляем новые ребра
-            for neighbor, neighbor_cost in graph[dest]:
-                if neighbor not in visited:
-                    heapq.heappush(edges, (neighbor_cost, dest, neighbor))
-    
-    return mst
-
 # ==================== Визуализация дерева Хаффмана ====================
 def visualize_huffman_tree(node: Optional[HuffmanNode], filename="huffman_tree.png"):
     """

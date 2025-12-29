@@ -285,24 +285,7 @@ def run_experiments():
     print(f"Выбранные интервалы: {selected}")
     print(f"Количество выбранных интервалов: {len(selected)}")
     
-    # Prim's Algorithm
-    print("\n2. Алгоритм Прима (минимальное остовное дерево):")
-    graph = {
-        'A': [('B', 4), ('C', 2)],
-        'B': [('A', 4), ('C', 1), ('D', 5)],
-        'C': [('A', 2), ('B', 1), ('D', 8), ('E', 10)],
-        'D': [('B', 5), ('C', 8), ('E', 2)],
-        'E': [('C', 10), ('D', 2)]
-    }
-    mst = prim_mst(graph)
-    print("Граф:")
-    for node, edges in graph.items():
-        print(f"  {node}: {edges}")
-    print("Минимальное остовное дерево:")
-    for edge in mst:
-        print(f"  {edge[0]} -- {edge[1]} (вес: {edge[2]})")
-    total_weight = sum(edge[2] for edge in mst)
-    print(f"Общий вес: {total_weight}")
+
     
     print("\n" + "=" * 60)
     print("ВСЕ ЭКСПЕРИМЕНТЫ ЗАВЕРШЕНЫ")
